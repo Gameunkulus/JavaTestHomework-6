@@ -39,7 +39,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int lowerSalesMonths(long[] sales){
+    public int lowerSalesMonths(long[] sales) {
         int months = 0;
         int midSales = midSumSalesPerMonth(sales);
 
@@ -53,7 +53,7 @@ public class StatsService {
     }
 
 
-    public int higherSalesMonths(long[] sales){
+    public int higherSalesMonths(long[] sales) {
         int months = 0;
         int midSales = midSumSalesPerMonth(sales);
 
