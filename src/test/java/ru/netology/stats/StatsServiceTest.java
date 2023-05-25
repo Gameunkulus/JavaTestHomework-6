@@ -1,51 +1,55 @@
 package ru.netology.stats;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
-    @CsvFileSource(files = "src/test/resources/bonus.csv")
-    @ParameterizedTest
-    void sumSalesTest(long arr[]) {
+    @Test
+    void sumSalesTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 180;
         Assertions.assertEquals(expected, prog.sumSales(arr));
     }
 
-    @ParameterizedTest
-    void midSumSalesPerMonthTest(long arr[]) {
+    @Test
+    void midSumSalesPerMonthTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 15;
         Assertions.assertEquals(expected, prog.midSumSalesPerMonth(arr));
     }
-    @ParameterizedTest
-    void maxSalesTest(long arr[]) {
+    @Test
+    void maxSalesTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 8;
         Assertions.assertEquals(expected, prog.maxSales(arr));
     }
 
-    @ParameterizedTest
-    void minSalesTest(long arr[]) {
+    @Test
+    void minSalesTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 9;
         Assertions.assertEquals(expected, prog.minSales(arr));
     }
 
-    @ParameterizedTest
-    void lowerSalesMonthsTest(long arr[]) {
+    @Test
+    void lowerSalesMonthsTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 5;
         Assertions.assertEquals(expected, prog.lowerSalesMonths(arr));
     }
 
-    @ParameterizedTest
-    void higherSalesMonthsTest(long arr[]) {
+    @Test
+    void higherSalesMonthsTest() {
         StatsService prog = new StatsService();
+        long arr[] = {8,15,13,15,17,20,19,20,7,14,14,18};
         int expected = 5;
         Assertions.assertEquals(expected, prog.higherSalesMonths(arr));
     }
